@@ -6,7 +6,7 @@ from collections import Counter
 import json
 class DataInfoTool(Tool):
     name: str = "Dataset Information Analyzer"
-    description: str = "Analyzes a pandas DataFrame and returns comprehensive information about the dataset structure, columns, and data distribution."
+    description: str = "Takes a path to a csv file, Analyzes it as a pandas DataFrame and returns comprehensive information about the dataset structure, columns, and data distribution."
     action_type: str = "analyze_dataframe_info"
     input_format: str = "A path to a CSV file."
     def _safe_convert_to_numeric(self, series: pd.Series) -> pd.Series:
