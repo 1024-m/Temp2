@@ -215,7 +215,7 @@ class DataInfoTool(Tool):
     def run(self, input_text: Any) -> str:
         """Main method to analyze DataFrame and return information."""
         try:
-            df = pd.read_csv(input_text[0])
+            df = pd.read_csv(input_text)
             #df = None
             if isinstance(input_text, pd.DataFrame):
                 df = input_text
