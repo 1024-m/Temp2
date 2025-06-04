@@ -8,7 +8,7 @@ class DataInfoTool(Tool):
     name: str = "Dataset Information Analyzer"
     description: str = "Takes a path to a csv file, Analyzes it as a pandas DataFrame and returns comprehensive information about the dataset structure, columns, and data distribution."
     action_type: str = "analyze_dataframe_info"
-    input_format: str = "A path to a CSV file."
+    input_format: str = "A path to a CSV file., should be the path of file without anything else like brackets or quotes."
     def _safe_convert_to_numeric(self, series: pd.Series) -> pd.Series:
         """Safely convert series to numeric, handling errors gracefully."""
         try:
