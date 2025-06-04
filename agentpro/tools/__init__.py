@@ -8,6 +8,7 @@ from .traversaalpro_rag_tool import TraversaalProRAGTool
 from .slide_generation_tool import SlideGenerationTool
 from .data_tool import DataTool
 from .code_tool import CodeEngine
+from .datainfo_tool import DataInfoTool
 __all__ = [
     "Tool",
     "QuickInternetTool",
@@ -18,5 +19,6 @@ __all__ = [
     "TraversaalProRAGTool",
     "SlideGenerationTool",
     "CodeEngine",
-    "DataTool"
+    "DataTool",
+    "DataInfoTool"
 ]
