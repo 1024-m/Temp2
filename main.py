@@ -1,7 +1,7 @@
 import os
 import argparse
 from agentpro import ReactAgent
-from agentpro.tools import QuickInternetTool, CalculateTool, UserInputTool, AresInternetTool, YFinanceTool, TraversaalProRAGTool, SlideGenerationTool, DataTool, CodeEngine
+from agentpro.tools import QuickInternetTool, CalculateTool, UserInputTool, AresInternetTool, YFinanceTool, TraversaalProRAGTool, SlideGenerationTool, DataTool, CodeEngine, DataInfoTool
 from agentpro import create_model
 import dotenv
 def main():
