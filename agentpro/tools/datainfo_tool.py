@@ -8,7 +8,7 @@ class DataInfoTool(Tool):
     name: str = "Dataset Information Analyzer"
     description: str = "Analyzes a pandas DataFrame and returns comprehensive information about the dataset structure, columns, and data distribution."
     action_type: str = "analyze_dataframe_info"
-    input_format: str = "A pandas DataFrame object or JSON with 'dataframe' key containing the DataFrame."
+    input_format: str = "A path to a CSV file."
     def _safe_convert_to_numeric(self, series: pd.Series) -> pd.Series:
         """Safely convert series to numeric, handling errors gracefully."""
         try:
@@ -215,7 +215,8 @@ class DataInfoTool(Tool):
     def run(self, input_text: Any) -> str:
         """Main method to analyze DataFrame and return information."""
         try:
-            df = None
+            df = pd.read_csv(input_text)
+            #df = None
             if isinstance(input_text, pd.DataFrame):
                 df = input_text
             elif isinstance(input_text, dict) and 'dataframe' in input_text:
